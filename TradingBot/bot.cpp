@@ -62,8 +62,16 @@ void main()
     int month = (nowLocal.tm_mon + 1);
     int day = (nowLocal.tm_mday);
     int prev_day = (nowLocal.tm_mday - 1);
-    string dtm = to_string(year) + '-' +'0'+ to_string(month) + '-' + '0' + to_string(day);
-    string ydtm = to_string(year) + '-' + '0' + to_string(month) + '-' + '0' + to_string(prev_day);
+    if(day<10)
+    {
+        string dtm = to_string(year) + '-' +'0'+ to_string(month) + '-' + '0' + to_string(day);
+        string ydtm = to_string(year) + '-' + '0' + to_string(month) + '-' + '0' + to_string(prev_day);
+    }
+    else
+    {
+        string dtm = to_string(year) + '-' +'0'+ to_string(month) + '-' +  to_string(day);
+        string ydtm = to_string(year) + '-' + '0' + to_string(month) + '-' +  to_string(prev_day);
+    }
     string url = "https://api.polygon.io/v2/aggs/ticker/"+name+"/range/1/minute/"+ "2022-01-07" + "/" + dtm + "?adjusted=true&sort=asc&limit=120&apiKey='polygon.io key'";
    
     string key = "your key";
