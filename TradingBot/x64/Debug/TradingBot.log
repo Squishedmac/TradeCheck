@@ -1,0 +1,3 @@
+﻿  bot.cpp
+C:\Users\Squis\source\repos\TradingBot\TradingBot\bot.cpp(50,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  TradingBot.vcxproj -> C:\Users\Squis\source\repos\TradingBot\x64\Debug\TradingBot.exe
